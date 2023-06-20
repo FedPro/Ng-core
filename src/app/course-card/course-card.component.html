@@ -1,8 +1,16 @@
-<div class="card">
-  <div class="card-title">{{ cardIndex + ' ' + course.description }}</div>
+<div class="card" *ngIf="course">
+  <div class="card-title">{{ cardIndex + " " + course.description }}</div>
   <div class="card-content">
-    <img width="300" alt="Angular Logo" [src]="course.iconUrl" />
+    <img
+      width="300"
+      alt="Angular Logo"
+      [src]="course.iconUrl"
+      *ngIf="isImageVisible(); else noImage"
+    />
+    <ng-template #noImage><p>Image N/A</p></ng-template>
     <p>{{ course.longDescription }}</p>
   </div>
-  <div class="card-actions"><button (click)="onCourseViewed()">View Course</button></div>
+  <div class="card-actions">
+    <button (click)="onCourseViewed()">View Course</button>
+  </div>
 </div>

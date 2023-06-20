@@ -53,7 +53,7 @@ export const COURSES: any = [
         id: 7,
         description: 'Angular Advanced Course',
         longDescription: "Learn Advanced Angular functionality typically used in Library Development. Advanced Components, Directives, Testing, Npm",
-        iconUrl: 'https://angular-academy.s3.amazonaws.com/thumbnails/advanced_angular-small-v3.png',
+        //iconUrl: 'https://angular-academy.s3.amazonaws.com/thumbnails/advanced_angular-small-v3.png',
         category: 'ADVANCED'
     },
     {

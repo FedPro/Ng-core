@@ -9,7 +9,7 @@ import { Course } from './model/course';
 })
 export class AppComponent {
   title = 'Ng-core';
-  courses = COURSES;
+  courses: Course[] = COURSES;
 
   onCourseSelected(course: Course){
     console.log("onCardClicked [APP]", course);
