@@ -16,16 +16,21 @@ export class CourseCardComponent implements OnInit {
   cardIndex!: number;
 
   @Output('courseSelected')
-  courseEmitter= new EventEmitter<Course>();
+  courseEmitter = new EventEmitter<Course>();
 
   ngOnInit(): void {}
 
-  isImageVisible(){
+  isImageVisible() {
     return this.course && this.course.iconUrl;
   }
 
-  onCourseViewed(){
-    console.log('CLICK component LVL')
-    this.courseEmitter.emit(this.course)
+  onCourseViewed() {
+    console.log('CLICK component LVL');
+    this.courseEmitter.emit(this.course);
+  }
+
+  cardClasses() {
+    var Cat = this.course.category;
+    return this.course.category && Cat.toLowerCase();
   }
 }

@@ -1,6 +1,6 @@
 .top-menu {
-    background: #1976d2;
-    padding: 2px 15px;
+  background: #1976d2;
+  padding: 2px 15px;
 }
 
 .logo {
@@ -44,4 +44,12 @@
 
 .card-actions button:hover {
   background-color: #d3d3d3;
+}
+
+.card.beginner {
+  background: rgb(227, 254, 219);
+}
+
+.card.advanced {
+  background: rgb(252, 226, 196);
 }
