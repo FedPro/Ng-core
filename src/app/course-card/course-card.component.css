@@ -46,10 +46,18 @@
   background-color: #d3d3d3;
 }
 
-.card.beginner {
+.course-category.beginner {
   background: rgb(227, 254, 219);
+  border-radius: 5px;
 }
 
-.card.advanced {
+.course-category.advanced {
   background: rgb(252, 226, 196);
+  border-radius: 5px;
+}
+
+.category {
+  font-size: 16px;
+  font-weight: bold;
+  padding: 6px;
 }
