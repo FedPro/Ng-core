@@ -1,5 +1,5 @@
 <div class="card" *ngIf="course">
-  <div class="card-title">{{ cardIndex + " " + course.description }}</div>
+  <div class="card-title">{{ cardIndex + " " + course.description | uppercase}}</div>
   <div class="card-content">
     <img
       width="300"
