@@ -7,7 +7,10 @@
       [src]="course.iconUrl"
       *ngIf="isImageVisible(); else noImage"
     />
-    <ng-template #noImage><p>Image N/A</p></ng-template>
+
+    <ng-template #noImage><p class="noImg">Image N/A</p>
+      <img width="300" height="169" src="../../../assets/images/noImg.png" alt="No image available">   
+    </ng-template>
     <p>{{ course.longDescription }}</p>
   </div>
 
