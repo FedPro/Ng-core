@@ -31,6 +31,6 @@ export class CourseCardComponent implements OnInit {
 
   cardClasses() {
     var Cat = this.course.category;
-    return this.course.category && Cat.toLowerCase();
+    return this.course.category ? Cat.toLowerCase() :  "allLevel";
   }
 }

@@ -20,3 +20,10 @@ course-card.is-last {
   padding-top: 20px;
   display: flex;
 }
+
+
+.SeeMore{
+  font-size: 10px;
+  padding: 3px;
+  margin: 3px;
+}
