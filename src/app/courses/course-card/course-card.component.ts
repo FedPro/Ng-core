@@ -20,10 +20,6 @@ export class CourseCardComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  isImageVisible() {
-    return this.course && this.course.iconUrl;
-  }
-
   onCourseViewed() {
     console.log('CLICK component LVL');
     this.courseEmitter.emit(this.course);
@@ -35,6 +31,6 @@ export class CourseCardComponent implements OnInit {
   }
 
   onToggle(isHighlighted: boolean) {
-    console.log(isHighlighted);
+    //console.log(isHighlighted);
   }
 }

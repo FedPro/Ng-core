@@ -4,22 +4,7 @@
       {{ cardIndex + " " + course.description | uppercase }}
     </div>
     <div class="card-content">
-      <img
-        width="300"
-        alt="Angular Logo"
-        [src]="course.iconUrl"
-        *ngIf="isImageVisible(); else noImage"
-      />
-
-      <ng-template #noImage
-        ><p class="noImg">Image N/A</p>
-        <img
-          width="300"
-          height="169"
-          src="../../../assets/images/noImg.png"
-          alt="No image available"
-        />
-      </ng-template>
+      <course-image [src]="course.iconUrl"></course-image>
       <p>{{ course.longDescription }}</p>
     </div>
 
