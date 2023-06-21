@@ -5,7 +5,7 @@
     </div>
     <div class="card-content">
       <course-image [src]="course.iconUrl"></course-image>
-      <p>{{ course.longDescription }}</p>
+      <p id="{{cardIndex}}" *ngxUnless="!course.longDescription">{{ course.longDescription }}</p>
     </div>
 
     <div

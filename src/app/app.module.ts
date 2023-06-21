@@ -7,6 +7,7 @@ import { CourseCardComponent } from './courses/course-card/course-card.component
 import { FilterByCategoryPipe } from './courses/filter-by-category.pipe';
 import { HighlightedDirective } from './directives/highlighted.directive';
 import { CourseImageComponent } from './courses/course-image/course-image.component';
+import { NgxUnlessDirective } from './directives/ngx-unless.directive';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { CourseImageComponent } from './courses/course-image/course-image.compon
     CourseCardComponent,
     FilterByCategoryPipe,
     HighlightedDirective,
-    CourseImageComponent
+    CourseImageComponent,
+    NgxUnlessDirective
   ],
   imports: [
     BrowserModule,

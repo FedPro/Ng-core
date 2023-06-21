@@ -13,7 +13,7 @@ export class HighlightedDirective {
 
 
   constructor() {
-    console.log('Highlighted Directive');
+    //console.log('Highlighted Directive');
   }
 
   @HostBinding('class.highlighted')
