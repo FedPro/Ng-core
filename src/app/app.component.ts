@@ -10,8 +10,13 @@ import { Course } from './model/course';
 export class AppComponent {
   title = 'Ng-core';
   courses: Course[] = COURSES;
+  txtSearched = ' ... ';
 
   onCourseSelected(course: Course){
     console.log("onCardClicked [APP]", course);
+  }
+
+  onTextChanged(txt: string){
+    this.txtSearched = txt;
   }
 }
