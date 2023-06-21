@@ -5,12 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CourseCardComponent } from './courses/course-card/course-card.component';
 import { FilterByCategoryPipe } from './courses/filter-by-category.pipe';
+import { HighlightedDirective } from './directives/highlighted.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     CourseCardComponent,
-    FilterByCategoryPipe
+    FilterByCategoryPipe,
+    HighlightedDirective
   ],
   imports: [
     BrowserModule,

@@ -1,28 +1,42 @@
-<div class="card" *ngIf="course">
-  <div class="card-title">{{ cardIndex + " " + course.description | uppercase}}</div>
-  <div class="card-content">
-    <img
-      width="300"
-      alt="Angular Logo"
-      [src]="course.iconUrl"
-      *ngIf="isImageVisible(); else noImage"
-    />
+<div [highlighted]="false" (toggleHighLight)="onToggle($event)">
+  <div class="card" *ngIf="course">
+    <div class="card-title">
+      {{ cardIndex + " " + course.description | uppercase }}
+    </div>
+    <div class="card-content">
+      <img
+        width="300"
+        alt="Angular Logo"
+        [src]="course.iconUrl"
+        *ngIf="isImageVisible(); else noImage"
+      />
 
-    <ng-template #noImage><p class="noImg">Image N/A</p>
-      <img width="300" height="169" src="../../../assets/images/noImg.png" alt="No image available">   
-    </ng-template>
-    <p>{{ course.longDescription }}</p>
-  </div>
+      <ng-template #noImage
+        ><p class="noImg">Image N/A</p>
+        <img
+          width="300"
+          height="169"
+          src="../../../assets/images/noImg.png"
+          alt="No image available"
+        />
+      </ng-template>
+      <p>{{ course.longDescription }}</p>
+    </div>
 
-  <div class="course-category" [ngSwitch]="course.category" [ngClass]="cardClasses()">
-    <div class="category" *ngSwitchCase="'BEGINNER'">Beginner</div>
-    <div class="category" *ngSwitchCase="'ADVANCED'">Advanced</div>
-    <div class="category" *ngSwitchCase="'INTERMEDIATE'">Intermediate</div> 
-    <div class="category" *ngSwitchDefault>All levels</div>
-  </div>
+    <div
+      class="course-category"
+      [ngSwitch]="course.category"
+      [ngClass]="cardClasses()"
+    >
+      <div class="category" *ngSwitchCase="'BEGINNER'">Beginner</div>
+      <div class="category" *ngSwitchCase="'ADVANCED'">Advanced</div>
+      <div class="category" *ngSwitchCase="'INTERMEDIATE'">Intermediate</div>
+      <div class="category" *ngSwitchDefault>All levels</div>
+    </div>
 
-  <div class="card-actions">
-    <ng-content></ng-content>
-    <button (click)="onCourseViewed()">View Course</button>
+    <div class="card-actions">
+      <ng-content></ng-content>
+      <button (click)="onCourseViewed()">View Course</button>
+    </div>
   </div>
 </div>

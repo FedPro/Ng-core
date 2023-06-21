@@ -31,6 +31,10 @@ export class CourseCardComponent implements OnInit {
 
   cardClasses() {
     var Cat = this.course.category;
-    return this.course.category ? Cat.toLowerCase() :  "allLevel";
+    return this.course.category ? Cat.toLowerCase() : 'allLevel';
+  }
+
+  onToggle(isHighlighted: boolean) {
+    console.log(isHighlighted);
   }
 }
